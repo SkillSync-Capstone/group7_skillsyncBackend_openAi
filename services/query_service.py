@@ -20,7 +20,7 @@ def handle_new_query(query, PERSIST=False):
         vectorstore = Chroma(persist_directory="persist", embedding_function=OpenAIEmbeddings())
         index = VectorStoreIndexWrapper(vectorstore=vectorstore)
     else:
-        loader = DirectoryLoader("docs/")
+        loader = DirectoryLoader("text_files/")
         if PERSIST:
             index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory": "persist"}).from_loaders([loader])
         else:
