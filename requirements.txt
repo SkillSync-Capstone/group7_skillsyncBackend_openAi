@@ -5,3 +5,4 @@ PyMuPDF
 flask_cors
 openai
 PyPDF2
+boto3
