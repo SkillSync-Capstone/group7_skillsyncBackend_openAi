@@ -2,6 +2,6 @@ flask
 langchain==0.0.267
 python-dotenv
 PyMuPDF
-python-docx 
 flask_cors
 openai
+PyPDF2
