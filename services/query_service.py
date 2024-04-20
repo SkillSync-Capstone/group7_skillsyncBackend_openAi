@@ -13,7 +13,6 @@ os.environ['OPENAI_API_KEY']
 
 
 def handle_new_query(query, PERSIST=False):
-    # Initialize the index based on the persistence flag
 
     if PERSIST and os.path.exists("persist"):
         print("Reusing index...\n")

@@ -16,9 +16,9 @@ def extract_text_and_create_text_file(pdf_file, text_filename):
     with open(os.path.join(TEXT_FILES_DIRECTORY, text_filename), 'w', encoding='utf-8') as text_file:
         for page in pdf_reader.pages:
             page_text = page.extract_text()
-            if page_text:  # Check if text is not None
+            if page_text:  
                 text_file.write(page_text + '\n')
-    pdf_file.seek(0)  # Reset the PDF file position if needed
+    pdf_file.seek(0) 
 
 def upload_file(file, filename):
     file_size = get_file_size(file)
